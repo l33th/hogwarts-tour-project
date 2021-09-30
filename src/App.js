@@ -1,20 +1,24 @@
-import React, { useState, useEffect } from 'react'
-import Loading from './components/Loading'
-import Tours from './components/Tours'
+import React, { useState, useEffect } from "react";
+import Loading from "./components/Loading";
+import Tours from "./components/Tours";
 // ATTENTION!!!!!!!!!!
 // I SWITCHED TO PERMANENT DOMAIN
 function App() {
-  const [loading, setLoading] = useState(true);
-  const [tours, setTours] = useState([]);
-  if (loading) {
-    return (
-      <main>
-        <Loading />
-      </main>
-    )
-  }
+	const [loading, setLoading] = useState(true);
+	const [tours, setTours] = useState([]);
+	if (loading) {
+		return (
+			<main>
+				<Loading />
+			</main>
+		);
+	}
 
-  return <h2>Hogwarts Tour Project Setup</h2>
+	return (
+    <main>
+      <Tours />
+    </main>
+  )
 }
 
-export default App
+export default App;
