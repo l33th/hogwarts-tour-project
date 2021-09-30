@@ -4,6 +4,16 @@ import Tours from './components/Tours'
 // ATTENTION!!!!!!!!!!
 // I SWITCHED TO PERMANENT DOMAIN
 function App() {
+  const [loading, setLoading] = useState(true);
+  const [tours, setTours] = useState([]);
+  if (loading) {
+    return (
+      <main>
+        <Loading />
+      </main>
+    )
+  }
+
   return <h2>Hogwarts Tour Project Setup</h2>
 }
 
